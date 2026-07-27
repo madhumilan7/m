@@ -1,0 +1,104 @@
+/* ===================================================
+   Madhu Milan Tea - Advanced Styling Enhancements
+   =================================================== */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0F1412;
+}
+::-webkit-scrollbar-thumb {
+    background: #AA7C11;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}
+
+/* Card Glow and Hover Elevate */
+.product-card, .about-card, .feature-box, .contact-container {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease !important;
+}
+
+.product-card:hover, .about-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+    border-color: #D4AF37 !important;
+}
+
+/* Pulsing Gold Button Glow Effect */
+.gold-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.gold-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: rotate(30deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.gold-btn:hover::after {
+    left: 100%;
+    opacity: 1;
+}
+
+/* Scroll Fade-In Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Back to Top Floating Button */
+#backToTop {
+    position: fixed;
+    bottom: 95px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background: #D4AF37;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background: #FFF;
+    transform: translateY(-3px);
+}
