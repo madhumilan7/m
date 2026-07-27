@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhu Milan - Assam to Jodhpur Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-dark: #AA7C11;
+            --dark-bg: #0F1412;
+            --card-bg: #18201D;
+            --text-light: #F5F5F5;
+            --text-muted: #A0AAB0;
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--dark-bg); color: var(--text-light); font-family: var(--font-body); padding: 50px 20px; }
+
+        .container { max-width: 1100px; margin: 0 auto; text-align: center; }
+
+        .gold-text {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-primary), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title { font-family: var(--font-heading); font-size: 2.4rem; margin-bottom: 10px; }
+        .subtitle { color: var(--text-muted); margin-bottom: 50px; }
+
+        /* Story Line Container */
+        .journey-tracker {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .journey-tracker::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary), var(--gold-light));
+            z-index: 1;
+        }
+
+        .journey-node {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .node-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--card-bg);
+            border: 2px solid var(--gold-primary);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--gold-primary);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .journey-node:hover .node-icon {
+            transform: scale(1.15);
+            background: var(--gold-primary);
+            color: #000;
+        }
+
+        .node-title { font-family: var(--font-heading); font-size: 1.2rem; color: var(--gold-light); margin-bottom: 8px; }
+        .node-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+        @media (max-width: 768px) {
+            .journey-tracker { flex-direction: column; gap: 40px; }
+            .journey-tracker::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title gold-text">From Estate to Your Cup</h1>
+        <p class="subtitle">Trace the authentic origin of Madhu Milan Premium Tea</p>
+
+        <div class="journey-tracker">
+            <div class="journey-node">
+                <div class="node-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div class="node-title">1. Assam Estates</div>
+                <div class="node-desc">Handpicked leaves from the lush, rich tea gardens of Assam ensuring raw, natural quality.</div>
+            </div>
+
+            <div class="journey-node">
+                <div class="node-icon"><i class="fa-solid fa-filter"></i></div>
+                <div class="node-title">2. Expert Processing</div>
+                <div class="node-desc">Selected, processed, and quality checked to preserve strong aroma and gold-red liquor strength.</div>
+            </div>
+
+            <div class="journey-node">
+                <div class="node-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="node-title">3. Banad, Jodhpur Hub</div>
+                <div class="node-desc">Carefully packaged and distributed under the oversight of founder Sarita Chaudhary.</div>
+            </div>
+
+            <div class="journey-node">
+                <div class="node-icon"><i class="fa-solid fa-heart"></i></div>
+                <div class="node-title">4. Every Household</div>
+                <div class="node-desc">Delivered direct to tea stalls, hotels, and buyers across India for an exceptional daily brew.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
